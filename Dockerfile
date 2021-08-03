@@ -7,7 +7,7 @@ RUN dnf install gcc-c++ libtool make autoconf automake python git -y
 RUN git clone https://github.com/bitcoin/bitcoin.git  /opt
 RUN cd /opt/bitcoin && ./autogen.sh
 RUN cd /opt/bitcoin && ./configure --disable-wallet --without-gui --with-incompatible-bdb --enable-upnp-default --enable-natpmp-default
-RUN cd /opt/bitcoin && make -j 4 && make install
+RUN cd /opt/bitcoin && make -j4 && make install
 
 # cleanup dnf
 RUN dnf clean all -y
