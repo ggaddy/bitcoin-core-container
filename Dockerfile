@@ -17,6 +17,7 @@ RUN dnf install -y boost-devel && \
   dnf install -y git && \
   dnf install -y bash && \
   dnf install -y diffutils
+RUN dnf update -y && dnf upgrade -y
 
 # download bitcoin core code
 RUN mkdir -p /opt/bitcoin
