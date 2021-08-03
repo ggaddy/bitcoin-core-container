@@ -12,4 +12,4 @@ RUN cd /opt/bitcoin && make -j4 && make install
 # cleanup dnf
 RUN dnf clean all -y
 
-ENTRYPOINT ["/bin/bitcoind"]
+ENTRYPOINT ["bitcoind"]
